@@ -54,7 +54,7 @@ def transform(data):
     return data
 
 def load_data(target_file, transformed_data): 
-    transformed_data.to_csv(target_file, index=False) 
+    transformed_data.to_csv(target_file, index=False)     
 
 
 def log_progress(message): 
@@ -82,7 +82,7 @@ print("Transformed Data")
 print(transformed_data) 
  
 # Log the completion of the Transformation process 
-log_progress("Transform phase Ended") 
+log_progress("Transform Phase Ended") 
  
 # Log the beginning of the Loading process 
 log_progress("Load phase Started") 
