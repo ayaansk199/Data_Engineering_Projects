@@ -23,18 +23,18 @@ To execute this script successfully, follow these steps:
 3. **ETL Process Overview:**
    - The script follows a typical ETL process: Extraction, Transformation, and Loading.
 
-### Extraction Phase
+## Extraction Phase
    - The script iterates through all CSV, JSON, and XML files in the specified folder.
    - For each file type, a corresponding extraction function is called to read and load the data into a Pandas DataFrame.
 
-### Transformation Phase
+## Transformation Phase
    - Height and weight values are transformed from inches/pounds to meters/kilograms, respectively.
    - The transformed data is then ready for further processing.
 
-### Loading Phase
+## Loading Phase
    - The transformed data is saved into a CSV file named "transformed_data.csv" in the same folder.
 
-### Logging
+## Logging
    - The script logs each phase of the ETL process, including the start and end times of each phase, in a log file named "logfile.txt".
 
 ## Conclusion
