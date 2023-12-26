@@ -4,9 +4,12 @@ from bs4 import BeautifulSoup
 import sqlite3
 
 url = "https://web.archive.org/web/20230902185655/https://en.everybodywiki.com/100_Most_Highly-Ranked_Films"
-db_name = "Movie_db"
+db_name = "E:/All Projects/Web Scrapping Project/Output/movie_database.db"
 table_name = "Top_50"
-csv_path = "/home/project/top_50_films.csv"
+csv_path = "E:/All Projects/Web Scrapping Project/Output/top_50_films.csv"
+
+
+
 df = pd.DataFrame(columns = ["Average Rank", "Film", "Year"])
 count = 0
 
