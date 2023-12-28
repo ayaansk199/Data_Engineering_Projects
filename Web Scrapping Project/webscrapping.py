@@ -22,7 +22,7 @@ rows = tables[0].find_all('tr')
 for row in rows:
     if count<50:
         col = row.find_all("td")
-        if len(col)!=0:
+        if len(col)!=0: #If not empty
             data_dict = {"Average Rank": col[0].contents[0],
                          "Film": col[1].contents[0],
                          "Year": col[2].contents[0]}
