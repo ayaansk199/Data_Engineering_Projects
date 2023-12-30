@@ -6,7 +6,7 @@ import pandas as pd
 from datetime import datetime
 import numpy as np 
 
-#Defining known valuesdefining known values
+#Defining known values 
 db_name = "World_Economies.db"
 table_name = "Countries_by_GDP"
 table_attributes = ["Country", "GDP_USD_millions"]
