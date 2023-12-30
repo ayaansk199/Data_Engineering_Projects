@@ -19,16 +19,9 @@ exchange_data_rate_path = "file:///home/project/exchange_rate.csv"
 
 # Task 1: Write a function log_progress()
 
-
-# Task 1: Write a function log_progress()
 def log_progress(message):
-    timestamp_format = '%Y-%m-%d %H:%M:%S'  # Year-Month-Day Hour:Minute:Second
-    timestamp = datetime.now().strftime(timestamp_format)
-    
-    log_entry = f"{timestamp} : {message}"
-    
     with open("code_log.txt", "a") as log_file:
-        log_file.write(log_entry + '\n')
+        log_file.write(message + '\n')
 
 
 #Task 2: Extract data from the given URL
@@ -82,33 +75,3 @@ def run_queries():
     query1 = pd.read_sql_query("SELECT * FROM Largest_banks;", conn)
     query2 = pd.read_sql_query("SELECT AVG(MC_GBP_Billion) FROM Largest_banks;", conn)
     query3 = pd.read_sql_query("SELECT Name from Largest_banks LIMIT 5;", conn)
-
-if __name__ == "__main__":
-    # Task 1
-    log_progress("ETL Job Started")
-    
-    # Task 2
-    log_progress("Extract phase Started")
-    extracted_data = extract()
-    log_progress("Extract phase Ended")
-    
-    # Task 3
-    log_progress("Transform phase Started")
-    transformed_data = transform(extracted_data)
-    log_progress("Transform Phase Ended")
-    
-    # Task 4
-    log_progress("Load to CSV phase Started")
-    load_to_csv(transformed_data)
-    log_progress("Load to CSV phase Ended")
-    
-    # Task 5
-    log_progress("Load to SQL database phase Started")
-    load_to_db(transformed_data)
-    log_progress("Load to SQL database phase Ended")
-    
-    # Task 6
-    log_progress("Run Queries phase Started")
-    run_queries()
-    log_progress("Run Queries phase Ended")
-    
